@@ -32,7 +32,27 @@ const obj3=Object.assign({},obj1,obj2)      //{}-->it is an optional parameter (
 // console.log(obj3);
  //const obj=Object.assign(obj1,obj2,obj4)        //here we copy obj2 and obj4 in obj1 thats why we give an {} tomaintain our original object
 const obj=Object.assign({},obj1,obj2,obj4)  //here we use an empty object{} and do not change any of our original object
- console.log(obj);
- console.log(Object.keys(obj));
- console.log(Object.values(obj));
- console.log(Object.entries(obj));
+//  console.log(obj);
+//  console.log(Object.keys(obj));
+//  console.log(Object.values(obj));
+//  console.log(Object.entries(obj));
+
+
+
+ /////DESTRUCTURING/////
+let course={
+    courseName:"javaScript",
+    price:2000,
+    instructor:"hitesh"
+}
+console.log(course.instructor);
+//another syntax
+//destructuring 
+
+const{instructor}=course
+console.log(instructor);
+
+//or
+
+const{instructor:instr}=course
+console.log(instr);
