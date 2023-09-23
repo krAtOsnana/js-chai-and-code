@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color:#212121;">
+    <h1 style="color: aqua;">backGround color changing project</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+</body>
+<script>
+        function randomColor(){
+            let base ="0000"
+            var newColor=`${Math.floor(Math.random()*10000+Math.random()*1000)}`
+           return `#${newColor}`;
+        }
+        //console.log(`${base+Math.floor(Math.random*10)}`);
+    var funct 
+    var div =  document.querySelector("body")
+    var start=document.querySelector("#start")
+   start. addEventListener("click",function(){
+        funct=setInterval(function(){
+           div.style.backgroundColor=randomColor()
+           console.log(randomColor());
+        },500)
+    })
+    document.querySelector("#stop").addEventListener("click",function(){
+        clearInterval(funct)
+        console.log("stopped");
+        div.style.backgroundColor="#212121"
+
+    })
+
+
+</script>
+</html>
