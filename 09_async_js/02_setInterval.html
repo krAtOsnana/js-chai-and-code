@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+</body>
+<script>
+
+    //   const printFun = function(str){
+    //         console.log(`str${Math.floor(Math.random()*10)}`);
+    //     }
+
+    //     function  intFun(){
+    //         setInterval(printFun,1000,`kusahgra `)
+    //     } 
+       
+
+    //     document.querySelector("#start").addEventListener("click",function(){
+    //         intFun()
+
+    //     })
+
+    //     document.querySelector("#stop").addEventListener("click",function(){
+    //         clearInterval(intFun)
+    //         console.log("halwa");
+    //     })
+        
+
+
+
+        const printFun = function(str){
+            console.log(`str${Math.floor(Math.random()*10)}`);
+        }
+
+        var intFun;
+       
+
+        document.querySelector("#start").addEventListener("click",function(){
+            intFun = setInterval(printFun,1000,`kusahgra `)
+
+        })
+
+        document.querySelector("#stop").addEventListener("click",function(){
+            clearInterval(intFun)
+            console.log("halwa");
+        })
+       
+</script>
+</html>
