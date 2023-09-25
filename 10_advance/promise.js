@@ -33,4 +33,39 @@
 //     console.log(studentINFO);
 // })
 
-  
+//   const promiseFour= new Promise((resolve,reject)=>{
+//     setTimeout(()=>{
+//         let error=false ;
+//         if(!error){
+//         resolve({name:"kushagra",year:"3rd"})
+//     }
+//         else{
+//         reject("error:something went wrong")
+//         }
+//     },1000)
+// })
+
+// promiseFour
+// .then((info)=>{;
+//     return info.name
+// })
+// .then((name)=>{
+//     console.log(name)
+// }).catch((error)=>{
+//     console.log(error);
+// }).finally(()=>{
+//     console.log("promise has been finally completed");
+// })
+
+fetch("https://api.github.com/users/krAtOsnana")    //https://jsonplaceholder.typicode.com/users
+.then((response)=>{
+    return response.json();
+}).then((info)=>{
+    // for (const i of info) {
+    //     console.log(i.address.street);
+    // }
+    console.log(info.login);
+})
+.catch((error)=>{
+console.log(error);
+})
