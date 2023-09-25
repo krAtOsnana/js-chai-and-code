@@ -12,8 +12,8 @@
 </body>
 <script>
         function randomColor(){
-            let base ="0000"
-            var newColor=`${Math.floor(Math.random()*10000+Math.random()*1000)}`
+            
+            var newColor=`${Math.floor(Math.random()*1000000+Math.random()*1000)}`
            return `#${newColor}`;
         }
         //console.log(`${base+Math.floor(Math.random*10)}`);
@@ -28,6 +28,7 @@
     })
     document.querySelector("#stop").addEventListener("click",function(){
         clearInterval(funct)
+        funct=null;
         console.log("stopped");
         div.style.backgroundColor="#212121"
 
